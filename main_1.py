@@ -11,4 +11,16 @@ cursor = conn.cursor()
 # Nome
 # Curso
 # Ano de Ingresso
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS Estudantes (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nome TEXT NOT NULL,
+    Curso TEXT NOT NULL,
+    Ano_de_Ingresso INTEGER    
+);
+""")
 
+cursor.execute("SELECT * FROM Estudantes WHERE Curso = Computação")
+
+cursor.execute
+print(cursor.fetchall()) 
